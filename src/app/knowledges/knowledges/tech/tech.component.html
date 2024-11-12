@@ -1,0 +1,15 @@
+<div class="container text-center tech-section py-5">
+  <h2 class="mb-4 text-light">Technologies</h2>
+  
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let tech of technologies">
+      <div class="card text-white bg-dark tech-card">
+        <img [src]="tech.image" class="card-img-top" alt="{{ tech.name }} logo">
+        <div class="card-body">
+          <h5 class="card-title">{{ tech.name }}</h5>
+          <p class="card-text">{{ tech.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

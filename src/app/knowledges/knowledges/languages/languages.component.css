@@ -1,0 +1,71 @@
+/* Estilos generales para la sección de idiomas */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #5499c7;
+  font-weight: bold;
+  margin-bottom: 30px;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+/* Estilos para las tarjetas de idiomas */
+.card {
+  background-color: #343a40; /* Fondo oscuro */
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Elevación al pasar el cursor */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra más prominente */
+}
+
+.card-body {
+  padding: 25px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f8f9fa; /* Texto claro */
+  margin-bottom: 10px;
+}
+
+.card-text {
+  color: #f8f9fa; /* Texto claro */
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* Estilo para la barra de progreso */
+.progress {
+  height: 8px;
+  background-color: #495057; /* Fondo de la barra de progreso */
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.progress-bar {
+  background-color: #5499c7; /* Color de la barra de progreso */
+  border-radius: 5px;
+  transition: width 0.5s ease-in-out;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

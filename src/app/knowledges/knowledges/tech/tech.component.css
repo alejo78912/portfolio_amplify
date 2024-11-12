@@ -1,0 +1,63 @@
+/* Estilos para la sección de tecnologías */
+.tech-section {
+  background-color: #212529; /* Fondo oscuro */
+  padding: 50px 20px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #5499c7; /* Color azul */
+  font-weight: bold;
+  margin-bottom: 30px;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+/* Estilos para las tarjetas de tecnologías */
+.card {
+  background-color: #343a40; /* Fondo oscuro */
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-8px); /* Efecto de elevación al pasar el ratón */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra más prominente */
+}
+
+.card-img-top {
+  max-height: 150px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.card-body {
+  padding: 25px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f8f9fa; /* Texto claro */
+  margin-bottom: 10px;
+}
+
+.card-text {
+  color: #f8f9fa; /* Texto claro */
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

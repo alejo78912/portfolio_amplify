@@ -1,0 +1,64 @@
+/* Estilos para la barra de navegación */
+.navbar {
+  background-color: #343a40; /* Fondo oscuro */
+  padding: 0.8rem 1.5rem;
+  animation: fadeInDown 1s ease-out;
+}
+
+/* Estilo para los enlaces de navegación */
+.navbar-nav .nav-link {
+  color: #f8f9fa; /* Texto claro */
+  font-size: 1.1rem;
+  margin-left: 20px;
+  text-transform: uppercase; /* Letras en mayúsculas */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #5499c7; /* Color del enlace en hover */
+  transform: translateY(-3px); /* Efecto de elevación */
+}
+
+/* Estilo para la clase active-link (enlace seleccionado) */
+.navbar-nav .nav-link.active-link {
+  color: #5499c7; /* Color azul para el enlace activo */
+  font-weight: bold;
+}
+
+/* Estilo para la marca (Alejandro Valencia) */
+.navbar-brand {
+  color: #5499c7; /* Color que coincide con el diseño */
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: slideDown 0.8s ease-out;
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilo para la barra de navegación en dispositivos móviles */
+.navbar-toggler-icon {
+  background-color: #5499c7; /* Icono del toggler con el color principal */
+}

@@ -1,0 +1,62 @@
+/* Estilos generales para la sección de proyectos */
+.container.projects {
+  padding: 50px 20px;
+  background-color: #212529; /* Fondo oscuro */
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Título de la sección de proyectos */
+h2 {
+  font-size: 2.5rem;
+  color: #5499c7; /* Azul */
+  font-weight: bold;
+  margin-bottom: 30px;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+/* Estilos para las tarjetas de proyectos */
+.project-card {
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #343a40; /* Fondo oscuro para las tarjetas */
+  animation: fadeInUp 1.5s ease-out;
+}
+
+/* Colores y formato de texto dentro de las tarjetas */
+.project-card h5 {
+  color: #5499c7; /* Azul para el título */
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.project-card p {
+  font-size: 1.1rem;
+  color: #f8f9fa; /* Texto claro */
+  line-height: 1.6;
+}
+
+/* Espaciado entre las tarjetas */
+.row {
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    padding: 15px;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

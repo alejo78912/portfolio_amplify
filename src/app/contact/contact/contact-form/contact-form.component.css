@@ -1,0 +1,98 @@
+/* Estilos para el contenedor principal */
+.contact-container {
+  background-color: #1c2833; /* Fondo azul oscuro */
+  color: #e8e9eb; /* Texto claro */
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Título estilizado */
+.title {
+  color: #5dade2; /* Azul claro */
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  animation: slideDown 0.8s ease-out;
+}
+
+/* Estilos para el formulario */
+.contact-form .form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Efecto de foco en los inputs */
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #34495e; /* Gris oscuro */
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #283747; /* Fondo de los inputs en azul oscuro */
+  color: #e8e9eb; /* Texto claro */
+}
+
+.form-control:focus {
+  border-color: #5dade2; /* Azul claro */
+  box-shadow: 0 0 5px rgba(93, 173, 226, 0.5);
+  transform: scale(1.02);
+}
+
+/* Botón de envío con animaciones */
+.btn-submit {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #5dade2; /* Azul claro */
+  border: none;
+  color: #1c2833; /* Texto en azul oscuro */
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #5499c7; /* Azul intermedio */
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(84, 153, 199, 0.4);
+}
+
+/* Animación de error para las alertas */
+.alert {
+  animation: slideDown 0.5s ease;
+  margin-bottom: 15px;
+  background-color: #c0392b; /* Rojo para alertas de error */
+  color: #ffffff; /* Texto blanco en alertas */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

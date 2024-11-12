@@ -1,0 +1,68 @@
+/* Estilos generales para la sección 'My Professional Experience' */
+.container.job {
+  padding: 50px 20px;
+  background-color: #212529; /* Fondo oscuro */
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #5499c7; /* Azul */
+  font-weight: bold;
+  margin-bottom: 30px;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+/* Estilos para las tarjetas de experiencia profesional */
+.job-card {
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #343a40; /* Fondo oscuro para las tarjetas */
+  animation: fadeInUp 1.5s ease-out;
+}
+
+/* Colores y formato de texto dentro de las tarjetas */
+.job-card h5 {
+  color: #5499c7; /* Azul para el título */
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.job-card p {
+  font-size: 1.1rem;
+  color: #f8f9fa; /* Texto claro */
+  line-height: 1.6;
+}
+
+.job-card small {
+  display: block;
+  margin-top: 10px;
+  color: #ced4da; /* Gris claro */
+  font-size: 0.9rem;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Espaciado entre las tarjetas */
+.row {
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .job-card {
+    padding: 15px;
+  }
+}

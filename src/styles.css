@@ -1,1 +1,175 @@
-/* You can add global styles to this file, and also import other style files */
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Asegurarse de que el cuerpo ocupe toda la pantalla */
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fondo oscuro y estilos generales para todo el documento */
+body {
+  background-color: #121212; /* Fondo oscuro */
+  color: #e0e0e0; /* Color de texto claro */
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-x: hidden; /* Elimina el desplazamiento horizontal */
+  width: 100%;
+  min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+}
+
+/* Asegura que app-root ocupe todo el alto y ancho disponible */
+app-root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+}
+
+/* Navbar */
+app-navbar {
+  background-color: #1f1f1f;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  color: #e0e0e0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Asegura que esté encima del contenido */
+}
+
+/* Espaciado debajo del navbar para que no se superponga con el contenido */
+.container {
+  background-color: #1e1e1e; /* Fondo oscuro adicional para el contenedor */
+  color: #e0e0e0;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin-top: 60px; /* Ajuste para no tapar el contenido debajo del navbar fijo */
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}
+
+/* Footer */
+app-footer {
+  background-color: #1f1f1f;
+  padding: 20px;
+  color: #e0e0e0;
+  text-align: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  position: relative;
+  margin-top: auto; /* Asegura que el footer siempre esté al final */
+}
+
+/* Espaciado para títulos */
+h1, h2, h3 {
+  color: #ffffff;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+/* Links */
+a {
+  color: #5499c7;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #5499c7;
+  text-decoration: underline;
+}
+
+/* Botones */
+button, .btn {
+  background-color: #5499c7;
+  color: #121212;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+button:hover, .btn:hover {
+  background-color: #5499c7;
+}
+
+/* Campos de formulario */
+input, textarea {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  border: 1px solid #5499c7;
+  padding: 10px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #b0b0b0;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #5499c7;
+}
+
+/* Sombra en el contenedor */
+.container {
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo de los cards */
+.card {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 1rem;
+}
+
+/* Animación suave al hacer hover sobre las cards */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  app-navbar, app-footer {
+    padding: 10px;
+  }
+}

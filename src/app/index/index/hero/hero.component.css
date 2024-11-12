@@ -1,0 +1,52 @@
+/* Estilo general para el contenedor de la hero section */
+.hero {
+  background-color: #5499c7; /* Azul suave que elegimos */
+  color: #ffffff; /* Texto blanco para contraste */
+  padding: 60px 0;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 1.5s ease-out;
+}
+
+
+/* Animación para el título y párrafo */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilo para los títulos en la sección Hero */
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Estilo para el texto en la sección Hero */
+.hero p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+/* Mejora en pantallas pequeñas */
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 20px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+}

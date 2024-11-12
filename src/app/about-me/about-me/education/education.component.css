@@ -1,0 +1,72 @@
+/* Estilos generales para la sección "My Education" */
+.education {
+  background-color: #343a40; /* Fondo oscuro */
+  color: #f8f9fa; /* Texto claro */
+  padding: 50px 0;
+  border-radius: 10px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.education h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #5499c7; /* Título en azul */
+  margin-bottom: 40px;
+  animation: slideDown 1s ease-out;
+}
+
+/* Tarjetas de educación */
+.education-card {
+  background-color: #212529; /* Fondo más oscuro para las tarjetas */
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.education-card h5 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #5499c7; /* Título en azul */
+}
+
+.education-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.education-card small {
+  font-size: 0.9rem;
+  color: #6c757d; /* Color más suave para la fecha */
+}
+
+/* Efecto hover para las tarjetas */
+.education-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

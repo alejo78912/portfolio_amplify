@@ -1,0 +1,21 @@
+<div class="container">
+  <h2 class="text-light text-center mb-5">Languages</h2>
+
+  <!-- List of Languages -->
+  <div class="row">
+    <div class="col-md-6 mb-4" *ngFor="let language of languages">
+      <div class="card bg-dark text-light card-hover">
+        <div class="card-body">
+          <h5 class="card-title">{{ language.name }}</h5>
+          <p class="card-text">{{ language.level }}</p>
+
+          <!-- Progress bar for language proficiency -->
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" [ngStyle]="{'width': language.proficiency}" 
+                 aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,63 @@
+/* Estilos generales para la sección 'About Me' */
+.about-me-section {
+  background-color: #212529; /* Fondo oscuro para la sección */
+  padding: 50px 0;
+  color: #f8f9fa;
+}
+
+.section-item {
+  margin-bottom: 40px;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Animación para cada componente */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ajustes adicionales para la animación en cada componente */
+.app-bio, .app-skills, .app-interests, .app-education {
+  background-color: #343a40; /* Fondo oscuro para cada sección */
+  border-radius: 10px;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.app-bio h2, .app-skills h2, .app-interests h2, .app-education h2 {
+  color: #5499c7; /* Color del texto de los títulos */
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.app-bio p, .app-skills p, .app-interests p, .app-education p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #f8f9fa; /* Texto claro */
+  text-align: justify;
+}
+
+/* Pequeña animación para los títulos */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.app-bio h2, .app-skills h2, .app-interests h2, .app-education h2 {
+  animation: slideDown 0.8s ease-out;
+}

@@ -1,0 +1,56 @@
+/* Estilos generales para la sección de experiencia profesional */
+.container {
+  padding: 60px 20px;
+  background-color: #212529; /* Fondo oscuro para mantener la coherencia */
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Título principal */
+h2 {
+  font-size: 2.5rem;
+  color: #5499c7; /* Azul */
+  font-weight: bold;
+  margin-bottom: 30px;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+/* Espaciado entre las secciones */
+.app-section {
+  margin-bottom: 50px;
+}
+
+/* Animación para los elementos */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mejorando la apariencia de los elementos dentro de cada sección */
+.app-job, .app-projects, .app-timeline {
+  animation: fadeInUp 1.5s ease-out;
+  margin-bottom: 50px;
+  padding: 30px;
+  background-color: #343a40;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajustes en pantallas más pequeñas */
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 10px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}

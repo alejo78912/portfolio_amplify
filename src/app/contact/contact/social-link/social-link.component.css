@@ -1,0 +1,68 @@
+/* Estilo del título */
+.section-title {
+  color: var(--color-dark-blue);
+  font-size: 2rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: var(--color-light-blue);
+  border-radius: 2px;
+}
+
+/* Botones de Redes Sociales */
+.social-links .btn-social-link {
+  font-size: 1.2rem;
+  margin: 0 10px;
+  padding: 10px 20px;
+  color: var(--color-dark-blue);
+  background-color: var(--color-light-gray);
+  border: 2px solid var(--color-light-blue);
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.social-links .btn-social-link i {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.social-links .btn-social-link:hover {
+  color: var(--color-white);
+  background-color: var(--color-light-blue);
+  border-color: var(--color-dark-blue);
+  transform: scale(1.05);
+}
+
+.social-links .btn-social-link:hover i {
+  transform: rotate(360deg);
+}
+
+/* Animación de aparición */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.social-links {
+  animation: fadeInUp 0.5s ease-in-out;
+}

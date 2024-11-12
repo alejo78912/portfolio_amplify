@@ -1,0 +1,51 @@
+/* Estilos generales para la sección Highlights */
+.highlights {
+  background-color: #343a40; /* Fondo oscuro */
+  color: #f8f9fa; /* Texto claro */
+  padding: 60px 20px;
+  margin-bottom: 60px;
+}
+
+/* Estilos para las tarjetas */
+.highlight-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Títulos dentro de las tarjetas */
+.highlight-card .card-title {
+  color: #5499c7; /* Azul del diseño */
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Animación de aparición suave */
+.card-body {
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Animación de entrada para las tarjetas */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Mejora para pantallas pequeñas */
+@media (max-width: 768px) {
+  .highlight-card .card-title {
+      font-size: 1.3rem;
+  }
+}

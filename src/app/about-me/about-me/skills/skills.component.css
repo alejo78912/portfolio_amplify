@@ -1,0 +1,95 @@
+/* Estilos generales para la sección "My Skills" */
+.skills {
+  background-color: #343a40; /* Fondo oscuro */
+  color: #f8f9fa; /* Texto claro */
+  padding: 50px 0;
+  border-radius: 10px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.skills h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #5499c7; /* Título en azul */
+  margin-bottom: 40px;
+  animation: slideDown 1s ease-out;
+}
+
+/* Tarjetas de habilidades */
+.skill-card {
+  background-color: #212529; /* Fondo más oscuro para las tarjetas */
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.skill-card i {
+  color: #5499c7; /* Íconos en azul */
+  transition: transform 0.3s ease;
+}
+
+.skill-card h5 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #5499c7; /* Título en azul */
+  margin-top: 15px;
+}
+
+.skill-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  color: #e1e1e1; /* Texto en un tono más suave */
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.skill-card:hover i {
+  transform: scale(1.2); /* Efecto de zoom en el ícono */
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efectos adicionales para la animación de hover en los íconos */
+.skill-card:hover i {
+  transform: scale(1.1); /* Le da un pequeño zoom a los íconos cuando pasa el ratón */
+}
+
+/* Animaciones específicas para las columnas de las tarjetas */
+@media (min-width: 768px) {
+  .skill-card {
+    animation: fadeInUp 1.2s ease-in-out;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills h2 {
+    font-size: 2rem;
+  }
+}
