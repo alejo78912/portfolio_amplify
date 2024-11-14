@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class ContactService {
-  private apiUrl = 'http://localhost:8000/api/contacts/contact'; 
+  private apiUrl = 'http://back.alejo78912.com:8000/api/contacts/contact'; 
   token: string | undefined = environment.apiKey;
   constructor(private http: HttpClient) {}
 
