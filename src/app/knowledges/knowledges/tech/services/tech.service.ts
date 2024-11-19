@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class TechService {
 
-  private apiUrl = 'http://localhost:8000/api/techs'; 
+  private apiUrl = 'https://back.alejo78912.com/spring/api/techs'; 
   token: string | undefined = environment.apiKey;
 
   constructor(private http: HttpClient) {}

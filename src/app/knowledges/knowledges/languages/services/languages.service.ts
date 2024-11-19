@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class LanguagesService {
 
-  private apiUrl = 'http://localhost:8000/api/languages';
+  private apiUrl = 'https://back.alejo78912.com/spring/api/languages';
   token: string | undefined = environment.apiKey;
 
   constructor(private http: HttpClient) { }
