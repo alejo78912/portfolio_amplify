@@ -1,32 +1,33 @@
-import { Component } from '@angular/core';
-import { LanguagesService } from './services/languages.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-languages',
   templateUrl: './languages.component.html',
   styleUrls: ['./languages.component.css']
 })
-export class LanguagesComponent {
+export class LanguagesComponent implements OnInit {
   
-  languages: any[] = [];
+  languages: any[] = []; // Lista de idiomas con datos estáticos quemados
   
-
-
-  constructor(private languagesService: LanguagesService) { }
+  constructor() {}
 
   ngOnInit(): void {
     this.loadLanguages();
   }
 
   loadLanguages(): void {
-  
-    this.languagesService.getLanguages().subscribe(
-      (data) => {
-        this.languages = data; 
+    // Datos quemados (mock)
+    this.languages = [
+      {
+        name: 'English',
+        level: 'Advanced',
+        proficiency: '80%' // Proporción para la barra de progreso
       },
-      (error) => {
-        console.error('Error fetching languages:', error);
+      {
+        name: 'Spanish',
+        level: 'Native',
+        proficiency: '100%' // Proporción para la barra de progreso
       }
-    );
+    ];
   }
 }
