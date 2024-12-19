@@ -1,36 +1,34 @@
 /* Estilos para la barra de navegación */
 .navbar {
-  background-color: #343a40; /* Fondo oscuro */
+  background-color: #343a40;
   padding: 0.8rem 1.5rem;
   animation: fadeInDown 1s ease-out;
   display: flex;
-  justify-content: space-between; /* Asegura que el logo y los enlaces se distribuyan correctamente */
-  align-items: center; /* Alineación vertical de los elementos */
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Estilo para los enlaces de navegación */
 .navbar-nav .nav-link {
-  color: #f8f9fa; /* Texto claro */
+  color: #f8f9fa;
   font-size: 1.1rem;
   margin-left: 20px;
-  text-transform: uppercase; /* Letras en mayúsculas */
+  text-transform: uppercase;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #5499c7; /* Color del enlace en hover */
-  transform: translateY(-3px); /* Efecto de elevación */
+  color: #5499c7;
+  transform: translateY(-3px);
 }
 
-/* Estilo para la clase active-link (enlace seleccionado) */
 .navbar-nav .nav-link.active-link {
-  color: #5499c7; /* Color azul para el enlace activo */
+  color: #5499c7;
   font-weight: bold;
 }
 
-/* Estilo para la marca (Alejandro Valencia) */
 .navbar-brand {
-  color: #5499c7; /* Color que coincide con el diseño */
+  color: #5499c7;
   font-size: 1.8rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -61,53 +59,52 @@
   }
 }
 
-/* Estilo para la barra de navegación en dispositivos móviles */
+/* Estilo para el icono del toggler en dispositivos móviles */
 .navbar-toggler-icon {
-  background-color: #5499c7; /* Icono del toggler con el color principal */
+  background-color: #5499c7;
 }
 
 /* Media Queries para pantallas más pequeñas */
 @media (max-width: 768px) {
-  /* Ajustes en la barra de navegación */
   .navbar {
-    flex-direction: column; /* Los elementos se apilan en lugar de estar en fila */
-    padding: 1rem; /* Más espacio en pantallas pequeñas */
+    flex-direction: column;
+    padding: 1rem;
   }
 
   .navbar-nav {
-    display: none; /* Ocultar los enlaces por defecto */
+    display: none;
     flex-direction: column;
     width: 100%;
     margin-top: 10px;
   }
 
   .navbar-nav.active {
-    display: flex; /* Mostrar los enlaces cuando el navbar-toggler esté activado */
+    display: flex; /* Muestra los enlaces cuando el navbar-toggler está activado */
   }
 
   .navbar-nav .nav-link {
-    margin-left: 0; /* Eliminar el margen de la izquierda */
-    text-align: center; /* Centrar los enlaces */
+    margin-left: 0;
+    text-align: center;
     padding: 10px 0;
   }
 
   .navbar-nav .nav-link:hover {
-    transform: translateY(0); /* Eliminar la elevación en pantallas pequeñas para evitar que se vea extraño */
+    transform: translateY(0);
   }
 
   .navbar-toggler {
-    border: none; /* Eliminar el borde del botón */
-    background: none; /* Sin fondo en el botón */
+    border: none;
+    background: none;
   }
 }
 
-/* Media Queries para pantallas muy pequeñas (hasta 480px) */
+/* Media Queries para pantallas más pequeñas (hasta 480px) */
 @media (max-width: 480px) {
   .navbar-brand {
-    font-size: 1.5rem; /* Reducir el tamaño de la marca para pantallas muy pequeñas */
+    font-size: 1.5rem;
   }
 
   .navbar-nav .nav-link {
-    font-size: 1rem; /* Reducir el tamaño de la fuente en pantallas muy pequeñas */
+    font-size: 1rem;
   }
 }
