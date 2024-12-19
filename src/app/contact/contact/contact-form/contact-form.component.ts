@@ -1,56 +1,63 @@
 import { Component } from '@angular/core';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
-  styleUrls: ['./contact-form.component.css'],
+  styleUrls: ['./contact-form.component.css']
 })
 export class ContactFormComponent {
   contact = {
     name: '',
     email: '',
-    message: '',
+    message: ''
   };
 
   alert = {
     type: '', // Tipo de alerta (success, danger, etc.)
-    msg: '', // Mensaje de la alerta
+    msg: ''   // Mensaje de la alerta
   };
+
+  // Inicializar EmailJS con la clave pública
+  constructor() {
+    emailjs.init('UcVqzhlLqi7ymhBMC'); // Reemplaza con tu "public_key"
+  }
 
   // Validar correo electrónico
   validateEmail(email: string): boolean {
-    const emailRegex =
-      /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     return emailRegex.test(email);
   }
 
+  // Manejar el submit del formulario
   onSubmit() {
     // Validar correo electrónico
     if (!this.validateEmail(this.contact.email)) {
-      this.alert = {
-        type: 'danger',
-        msg: 'Please enter a valid email address.',
-      };
+      this.alert = { type: 'danger', msg: 'Please enter a valid email address.' };
       return;
     }
 
-    // Crear enlace mailto
-    const mailtoLink = `mailto:acontacts13@gmail.com?subject=Message from ${encodeURIComponent(
-      this.contact.name
-    )}&body=${encodeURIComponent(this.contact.message)} (From: ${
-      this.contact.email
-    })`;
-
-    // Abrir el cliente de correo predeterminado del usuario
-    window.location.href = mailtoLink;
-
-    // Mostrar mensaje de éxito
-    this.alert = {
-      type: 'success',
-      msg: 'Your email client has been opened to send the message.',
+    // Parametros del correo a enviar
+    const emailParams = {
+      from_name: this.contact.name,
+      from_email: this.contact.email,
+      message: this.contact.message,
     };
 
-    // Reiniciar el formulario
+    // Enviar el formulario a EmailJS
+    emailjs.send('service_pd4a2uc', 'template_nltku1f', emailParams)
+      .then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          this.alert = { type: 'success', msg: 'Your message has been sent successfully!' };
+        },
+        (error) => {
+          console.error('FAILED...', error);
+          this.alert = { type: 'danger', msg: 'There was an error sending your message. Please try again later.' };
+        }
+      );
+
+    // Reiniciar el formulario después de enviarlo
     this.contact = { name: '', email: '', message: '' };
   }
 }

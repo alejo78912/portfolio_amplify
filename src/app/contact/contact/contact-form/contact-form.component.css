@@ -1,4 +1,6 @@
-/* Estilos para el contenedor principal */
+/* Estilos Generales */
+
+/* Contenedor principal del formulario */
 .contact-container {
   background-color: #1c2833; /* Fondo azul oscuro */
   color: #e8e9eb; /* Texto claro */
@@ -19,13 +21,13 @@
   animation: slideDown 0.8s ease-out;
 }
 
-/* Estilos para el formulario */
+/* Estilos del formulario */
 .contact-form .form-group {
   margin-bottom: 20px;
   position: relative;
 }
 
-/* Efecto de foco en los inputs */
+/* Estilo de los campos de formulario */
 .form-control {
   width: 100%;
   padding: 12px;
@@ -37,6 +39,7 @@
   color: #e8e9eb; /* Texto claro */
 }
 
+/* Efecto al hacer foco en los inputs */
 .form-control:focus {
   border-color: #5dade2; /* Azul claro */
   box-shadow: 0 0 5px rgba(93, 173, 226, 0.5);
@@ -58,23 +61,36 @@
   transition: background-color 0.3s, transform 0.3s;
 }
 
+/* Efecto hover del botón */
 .btn-submit:hover {
   background-color: #5499c7; /* Azul intermedio */
   transform: translateY(-3px);
   box-shadow: 0 4px 8px rgba(84, 153, 199, 0.4);
 }
 
-/* Animación de error para las alertas */
+/* Estilos de alerta */
 .alert {
-  animation: slideDown 0.5s ease;
   margin-bottom: 15px;
-  background-color: #c0392b; /* Rojo para alertas de error */
-  color: #ffffff; /* Texto blanco en alertas */
   padding: 10px;
   border-radius: 5px;
+  animation: slideDown 0.5s ease;
+}
+
+/* Alerta de éxito (verde) */
+.alert-success {
+  background-color: #28a745; /* Verde */
+  color: #ffffff; /* Texto blanco */
+}
+
+/* Alerta de error (roja) */
+.alert-danger {
+  background-color: #c0392b; /* Rojo */
+  color: #ffffff; /* Texto blanco */
 }
 
 /* Animaciones */
+
+/* Animación para el fade-in del contenedor */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -86,6 +102,7 @@
   }
 }
 
+/* Animación para el slide-down de las alertas */
 @keyframes slideDown {
   from {
     opacity: 0;
