@@ -29,12 +29,12 @@
 /* Animación de entrada */
 @keyframes fadeInUp {
   from {
-      opacity: 0;
-      transform: translateY(20px);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -53,11 +53,65 @@
 /* Ajuste para la animación suave en otras secciones */
 @keyframes fadeInUp {
   from {
-      opacity: 0;
-      transform: translateY(20px);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mejora para pantallas pequeñas */
+@media (max-width: 768px) {
+  /* Sección Home */
+  .home {
+    padding: 30px 15px; /* Reducir el padding en pantallas pequeñas */
+  }
+
+  /* Sección Introducción */
+  .intro {
+    padding: 25px; /* Reducir el padding en pantallas pequeñas */
+  }
+
+  .intro p {
+    font-size: 1rem; /* Reducir el tamaño del texto */
+  }
+
+  /* Sección Highlights */
+  .highlights-section {
+    margin-top: 60px; /* Reducir el espacio superior */
+  }
+
+  /* Tarjetas */
+  .card {
+    margin-bottom: 20px; /* Espaciado entre tarjetas */
+  }
+}
+
+/* Mejora para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  /* Sección Home */
+  .home {
+    padding: 20px 10px; /* Ajustar aún más el padding */
+  }
+
+  /* Sección Introducción */
+  .intro {
+    padding: 20px; /* Ajustar padding */
+  }
+
+  .intro p {
+    font-size: 0.95rem; /* Reducir el tamaño del texto */
+  }
+
+  /* Sección Highlights */
+  .highlights-section {
+    margin-top: 50px; /* Reducir el espacio superior */
+  }
+
+  /* Tarjetas */
+  .card {
+    margin-bottom: 15px; /* Reducir el espaciado */
   }
 }

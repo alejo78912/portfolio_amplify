@@ -66,3 +66,51 @@
 .social-links {
   animation: fadeInUp 0.5s ease-in-out;
 }
+
+/* Media Queries para pantallas pequeñas (dispositivos móviles) */
+@media (max-width: 768px) {
+  /* Ajuste del título */
+  .section-title {
+    font-size: 1.5rem; /* Reducir el tamaño del título */
+  }
+
+  .section-title::after {
+    width: 40px; /* Reducir el tamaño de la línea debajo del título */
+    bottom: -8px; /* Ajustar la distancia desde el título */
+  }
+
+  /* Ajuste de los botones de redes sociales */
+  .social-links .btn-social-link {
+    font-size: 1rem; /* Reducir el tamaño de la fuente de los botones */
+    padding: 8px 15px; /* Ajustar el padding de los botones */
+    margin: 5px; /* Reducir el margen entre los botones */
+  }
+
+  .social-links .btn-social-link i {
+    font-size: 1.2rem; /* Reducir el tamaño de los iconos */
+  }
+}
+
+/* Media Queries para pantallas muy pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+  /* Ajuste adicional del título */
+  .section-title {
+    font-size: 1.3rem; /* Reducir aún más el tamaño del título */
+  }
+
+  .section-title::after {
+    width: 35px; /* Reducir aún más el tamaño de la línea debajo del título */
+    bottom: -6px; /* Ajustar la distancia desde el título */
+  }
+
+  /* Ajuste de los botones de redes sociales */
+  .social-links .btn-social-link {
+    font-size: 0.9rem; /* Reducir el tamaño de la fuente de los botones */
+    padding: 7px 12px; /* Ajustar aún más el padding de los botones */
+    margin: 4px; /* Reducir el margen entre los botones */
+  }
+
+  .social-links .btn-social-link i {
+    font-size: 1rem; /* Reducir el tamaño de los iconos */
+  }
+}

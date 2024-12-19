@@ -11,6 +11,7 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px; /* Espacio entre las tarjetas */
 }
 
 .highlight-card:hover {
@@ -46,6 +47,30 @@
 /* Mejora para pantallas pequeñas */
 @media (max-width: 768px) {
   .highlight-card .card-title {
-      font-size: 1.3rem;
+    font-size: 1.3rem; /* Reducir tamaño del título */
+  }
+
+  /* Hacer que las tarjetas ocupen todo el ancho disponible */
+  .highlight-card {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; /* Las tarjetas deben ocupar el 100% del contenedor en pantallas pequeñas */
+  }
+  
+  /* Ajuste en el padding de la sección */
+  .highlights {
+    padding: 40px 15px; /* Reducir el padding para pantallas más pequeñas */
+  }
+}
+
+/* Mejora para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .highlight-card .card-title {
+    font-size: 1.1rem; /* Reducir aún más el tamaño del título en pantallas muy pequeñas */
+  }
+  
+  /* Hacer que las tarjetas apilen en lugar de estar una al lado de la otra */
+  .highlight-card {
+    margin-bottom: 20px; /* Reducir espacio entre las tarjetas */
   }
 }

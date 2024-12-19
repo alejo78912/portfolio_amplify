@@ -113,3 +113,50 @@
     transform: translateY(0);
   }
 }
+
+/* Media Queries para pantallas pequeñas (dispositivos móviles) */
+@media (max-width: 768px) {
+  /* Ajustar tamaño del título */
+  .title {
+    font-size: 1.5rem; /* Reducir el tamaño del título */
+  }
+
+  /* Ajustar el ancho del contenedor */
+  .contact-container {
+    padding: 20px;
+    max-width: 90%; /* Asegura que el formulario se ajuste a pantallas más pequeñas */
+  }
+
+  /* Reducir el tamaño de los inputs y márgenes */
+  .form-control {
+    padding: 10px;
+    font-size: 0.9rem; /* Reducir el tamaño de la fuente en los inputs */
+  }
+
+  /* Ajuste de los márgenes en los botones */
+  .btn-submit {
+    padding: 10px;
+    font-size: 0.9rem; /* Reducir el tamaño del botón */
+  }
+}
+
+/* Media Queries para pantallas muy pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.3rem; /* Reducir aún más el tamaño del título */
+  }
+
+  .contact-container {
+    padding: 15px;
+  }
+
+  .form-control {
+    padding: 8px;
+    font-size: 0.85rem; /* Reducir el tamaño de los inputs aún más */
+  }
+
+  .btn-submit {
+    padding: 8px;
+    font-size: 0.85rem; /* Reducir aún más el tamaño del botón */
+  }
+}

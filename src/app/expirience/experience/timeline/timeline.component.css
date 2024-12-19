@@ -52,8 +52,67 @@ h2 {
 }
 
 @media (max-width: 768px) {
+  /* Ajustes para pantallas más pequeñas (tabletas y móviles grandes) */
+  .container.timeline {
+    padding: 40px 15px; /* Reducir el padding */
+  }
+
+  h2 {
+    font-size: 2rem; /* Reducir el tamaño del título */
+    margin-bottom: 20px; /* Ajustar el margen inferior */
+  }
+
   .timeline-item {
-    padding: 15px;
+    padding: 15px; /* Reducir el padding de los items */
+  }
+
+  .timeline-content h5 {
+    font-size: 1.3rem; /* Reducir el tamaño del título en los items */
+  }
+
+  .timeline-content p {
+    font-size: 1rem; /* Reducir el tamaño del texto en los items */
+  }
+
+  .timeline-content small {
+    font-size: 0.9rem; /* Reducir el tamaño de la fecha */
+  }
+
+  .row {
+    margin-top: 30px; /* Reducir el espacio entre los items */
+  }
+}
+
+/* Media Queries para pantallas muy pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+  /* Ajustes para pantallas muy pequeñas (móviles) */
+  .container.timeline {
+    padding: 30px 10px; /* Reducir aún más el padding */
+  }
+
+  h2 {
+    font-size: 1.6rem; /* Reducir el tamaño del título */
+    margin-bottom: 15px; /* Ajustar el margen inferior */
+  }
+
+  .timeline-item {
+    padding: 10px; /* Reducir el padding de los items */
+  }
+
+  .timeline-content h5 {
+    font-size: 1.2rem; /* Reducir el tamaño del título de los items */
+  }
+
+  .timeline-content p {
+    font-size: 0.95rem; /* Reducir el tamaño del texto */
+  }
+
+  .timeline-content small {
+    font-size: 0.8rem; /* Reducir el tamaño de la fecha */
+  }
+
+  .row {
+    margin-top: 20px; /* Reducir el espacio entre los items */
   }
 }
 

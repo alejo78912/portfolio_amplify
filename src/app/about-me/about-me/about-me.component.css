@@ -61,3 +61,52 @@
 .app-bio h2, .app-skills h2, .app-interests h2, .app-education h2 {
   animation: slideDown 0.8s ease-out;
 }
+
+/* Media Queries para pantallas pequeñas (dispositivos móviles) */
+@media (max-width: 767px) {
+  .about-me-section {
+    padding: 30px 15px; /* Reducir el padding de la sección para pantallas pequeñas */
+  }
+
+  .section-item {
+    margin-bottom: 30px; /* Reducir espacio entre los elementos */
+  }
+
+  .app-bio, .app-skills, .app-interests, .app-education {
+    padding: 30px 15px; /* Reducir padding de las secciones */
+    max-width: 100%; /* Hacer las secciones más anchas en pantallas pequeñas */
+  }
+
+  .app-bio h2, .app-skills h2, .app-interests h2, .app-education h2 {
+    font-size: 1.8rem; /* Reducir tamaño de los títulos */
+  }
+
+  .app-bio p, .app-skills p, .app-interests p, .app-education p {
+    font-size: 1rem; /* Reducir tamaño del texto para mejor legibilidad */
+    line-height: 1.4; /* Ajustar el interlineado */
+    text-align: left; /* Alinear el texto a la izquierda para pantallas pequeñas */
+  }
+}
+
+/* Media Queries para pantallas muy pequeñas (dispositivos con pantallas pequeñas, como smartphones en orientación vertical) */
+@media (max-width: 480px) {
+  .about-me-section {
+    padding: 20px 10px; /* Reducir más el padding */
+  }
+
+  .section-item {
+    margin-bottom: 20px; /* Reducir aún más el espacio entre los elementos */
+  }
+
+  .app-bio, .app-skills, .app-interests, .app-education {
+    padding: 20px 10px; /* Reducir más el padding de las secciones */
+  }
+
+  .app-bio h2, .app-skills h2, .app-interests h2, .app-education h2 {
+    font-size: 1.6rem; /* Reducir aún más el tamaño de los títulos */
+  }
+
+  .app-bio p, .app-skills p, .app-interests p, .app-education p {
+    font-size: 0.95rem; /* Reducir aún más el tamaño del texto */
+  }
+}

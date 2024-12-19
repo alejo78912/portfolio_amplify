@@ -4,6 +4,7 @@
   color: #f8f9fa; /* Texto claro */
   padding: 40px 0;
   animation: fadeInUp 1s ease-out;
+  text-align: center; /* Aseguramos que el contenido esté centrado en todas las pantallas */
 }
 
 .footer-text {
@@ -17,6 +18,7 @@
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap; /* Asegura que los enlaces se ajusten a nuevas líneas en pantallas pequeñas */
 }
 
 .btn-social-link {
@@ -45,6 +47,49 @@
   color: #fff; /* Cambia el color del ícono al hacer hover */
 }
 
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  /* Ajuste del padding para pantallas pequeñas */
+  .footer {
+    padding: 30px 15px;
+  }
+
+  .footer-text {
+    font-size: 0.9rem; /* Reducir el tamaño del texto en dispositivos pequeños */
+  }
+
+  .social-links {
+    gap: 15px; /* Reducir el espacio entre los íconos */
+  }
+
+  .btn-social-link {
+    font-size: 1rem; /* Reducir el tamaño de la fuente en pantallas pequeñas */
+    padding: 6px 15px; /* Reducir el padding para evitar que se vean muy grandes */
+  }
+}
+
+/* Media Queries para pantallas muy pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+  /* Ajustar aún más el padding en pantallas muy pequeñas */
+  .footer {
+    padding: 20px 10px;
+  }
+
+  .footer-text {
+    font-size: 0.85rem; /* Ajustar aún más el tamaño del texto */
+  }
+
+  .social-links {
+    gap: 10px; /* Reducir más el espacio entre los íconos */
+  }
+
+  .btn-social-link {
+    font-size: 0.9rem; /* Reducir tamaño de la fuente */
+    padding: 5px 12px; /* Reducir padding */
+  }
+}
+
+/* Animaciones */
 @keyframes fadeInUp {
   from {
     opacity: 0;

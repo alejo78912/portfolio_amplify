@@ -10,7 +10,6 @@
   animation: fadeInUp 1.5s ease-out;
 }
 
-
 /* Animación para el título y párrafo */
 @keyframes fadeInUp {
   from {
@@ -39,14 +38,29 @@
 /* Mejora en pantallas pequeñas */
 @media (max-width: 768px) {
   .hero {
-    padding: 60px 20px;
+    padding: 60px 20px; /* Ajustar el padding para pantallas más pequeñas */
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Reducir el tamaño del título */
   }
 
   p {
-    font-size: 1.1rem;
+    font-size: 1.1rem; /* Reducir el tamaño del texto */
+  }
+}
+
+/* Mejora en pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .hero {
+    padding: 40px 15px; /* Menos padding en pantallas muy pequeñas */
+  }
+
+  h1 {
+    font-size: 2rem; /* Reducir más el tamaño del título */
+  }
+
+  p {
+    font-size: 1rem; /* Reducir más el tamaño del texto */
   }
 }

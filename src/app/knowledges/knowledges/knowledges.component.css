@@ -41,3 +41,47 @@ h2 {
 app-tech, app-languages {
   animation: fadeInUp 1.5s ease-out;
 }
+
+/* Mejora para pantallas pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+  /* Contenedor */
+  .container {
+    padding: 40px 15px; /* Reducir padding en pantallas pequeñas */
+  }
+
+  /* Título h2 */
+  h2 {
+    font-size: 2rem; /* Reducir el tamaño del título */
+  }
+
+  /* Espaciado entre secciones */
+  .section-spacing {
+    margin-bottom: 80px; /* Reducir el espacio entre secciones */
+  }
+
+  .section-spacing-languages {
+    margin-top: 100px; /* Reducir espacio superior */
+  }
+}
+
+/* Mejora para pantallas más pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+  /* Contenedor */
+  .container {
+    padding: 30px 10px; /* Reducir padding aún más en pantallas pequeñas */
+  }
+
+  /* Título h2 */
+  h2 {
+    font-size: 1.6rem; /* Reducir aún más el tamaño del título */
+  }
+
+  /* Espaciado entre secciones */
+  .section-spacing {
+    margin-bottom: 60px; /* Reducir aún más el espacio entre secciones */
+  }
+
+  .section-spacing-languages {
+    margin-top: 80px; /* Reducir espacio superior */
+  }
+}

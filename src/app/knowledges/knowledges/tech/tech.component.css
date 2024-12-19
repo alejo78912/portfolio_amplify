@@ -61,3 +61,69 @@ h2 {
     transform: translateY(0);
   }
 }
+
+/* Mejora para pantallas pequeñas */
+@media (max-width: 768px) {
+  /* Contenedor */
+  .tech-section {
+    padding: 40px 15px; /* Reducir padding en pantallas pequeñas */
+  }
+
+  /* Título */
+  h2 {
+    font-size: 2rem; /* Reducir tamaño del título */
+  }
+
+  /* Tarjetas de tecnologías */
+  .card {
+    margin-bottom: 20px; /* Espaciado entre tarjetas */
+  }
+
+  /* Título de las tarjetas */
+  .card-title {
+    font-size: 1.3rem; /* Reducir tamaño del título de las tarjetas */
+  }
+
+  /* Texto de las tarjetas */
+  .card-text {
+    font-size: 0.95rem; /* Reducir tamaño del texto */
+  }
+
+  /* Imagen de la tarjeta */
+  .card-img-top {
+    max-height: 120px; /* Reducir tamaño de la imagen */
+  }
+}
+
+/* Mejora para pantallas más pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+  /* Contenedor */
+  .tech-section {
+    padding: 30px 10px; /* Ajustar padding para pantallas más pequeñas */
+  }
+
+  /* Título */
+  h2 {
+    font-size: 1.8rem; /* Reducir aún más el tamaño del título */
+  }
+
+  /* Tarjetas de tecnologías */
+  .card {
+    padding: 15px; /* Reducir padding de las tarjetas */
+  }
+
+  /* Título de las tarjetas */
+  .card-title {
+    font-size: 1.2rem; /* Reducir tamaño del título de las tarjetas */
+  }
+
+  /* Texto de las tarjetas */
+  .card-text {
+    font-size: 0.9rem; /* Reducir tamaño del texto */
+  }
+
+  /* Imagen de la tarjeta */
+  .card-img-top {
+    max-height: 100px; /* Reducir tamaño de la imagen */
+  }
+}

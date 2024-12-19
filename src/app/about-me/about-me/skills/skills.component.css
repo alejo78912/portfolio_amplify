@@ -88,8 +88,53 @@
   }
 }
 
+/* Media Queries para pantallas pequeñas (dispositivos móviles) */
 @media (max-width: 768px) {
   .skills h2 {
-    font-size: 2rem;
+    font-size: 2rem; /* Reducir tamaño del título en pantallas pequeñas */
+    margin-bottom: 20px;
+  }
+
+  /* Ajustar la disposición de las tarjetas */
+  .skill-card {
+    padding: 20px;
+    margin-bottom: 20px;
+    max-width: 100%; /* Hacer que las tarjetas ocupen todo el ancho disponible */
+  }
+
+  .skill-card h5 {
+    font-size: 1.1rem; /* Reducir el tamaño del título dentro de las tarjetas */
+  }
+
+  .skill-card p {
+    font-size: 0.95rem; /* Reducir el tamaño del texto */
+    line-height: 1.4;
+  }
+
+  /* Cambiar la disposición de las tarjetas a una columna en lugar de varias filas */
+  .skills .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Media Queries para pantallas muy pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+  .skills h2 {
+    font-size: 1.8rem; /* Reducir aún más el tamaño del título */
+  }
+
+  .skill-card {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .skill-card h5 {
+    font-size: 1rem; /* Reducir aún más el tamaño de los títulos */
+  }
+
+  .skill-card p {
+    font-size: 0.9rem; /* Reducir tamaño del texto aún más */
   }
 }

@@ -81,3 +81,57 @@
     transform: translateY(0);
   }
 }
+
+/* Media Queries para pantallas pequeñas (dispositivos móviles) */
+@media (max-width: 768px) {
+  /* Ajuste del título */
+  .title {
+    font-size: 1.5rem; /* Reducir el tamaño del título */
+    margin-bottom: 15px; /* Ajustar el margen inferior */
+  }
+
+  /* Ajuste del contenedor */
+  .social-container {
+    padding: 20px; /* Reducir el padding en pantallas pequeñas */
+    margin: 20px auto; /* Ajustar el margen */
+    max-width: 500px; /* Reducir el tamaño máximo */
+  }
+
+  /* Ajuste de los botones sociales */
+  .social-links {
+    gap: 15px; /* Reducir el espacio entre los iconos */
+  }
+
+  .social-links a {
+    width: 45px; /* Reducir el tamaño de los botones */
+    height: 45px;
+    font-size: 1.3rem; /* Reducir el tamaño de los iconos */
+  }
+}
+
+/* Media Queries para pantallas muy pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+  /* Ajuste del título */
+  .title {
+    font-size: 1.2rem; /* Reducir aún más el tamaño del título */
+    margin-bottom: 10px; /* Reducir el margen inferior */
+  }
+
+  /* Ajuste del contenedor */
+  .social-container {
+    padding: 15px; /* Reducir aún más el padding */
+    margin: 15px auto; /* Ajustar el margen */
+    max-width: 400px; /* Reducir el tamaño máximo */
+  }
+
+  /* Ajuste de los botones sociales */
+  .social-links {
+    gap: 10px; /* Reducir aún más el espacio entre los iconos */
+  }
+
+  .social-links a {
+    width: 40px; /* Reducir el tamaño de los botones */
+    height: 40px;
+    font-size: 1.2rem; /* Reducir el tamaño de los iconos */
+  }
+}

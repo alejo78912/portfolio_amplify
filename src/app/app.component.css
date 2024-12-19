@@ -164,6 +164,8 @@ input:focus, textarea:focus {
 }
 
 /* Responsive design */
+
+/* Para pantallas más grandes que 768px */
 @media (max-width: 768px) {
   .container {
     padding: 15px;
@@ -173,5 +175,49 @@ input:focus, textarea:focus {
 
   app-navbar, app-footer {
     padding: 10px;
+  }
+
+  .card {
+    padding: 15px; /* Reducir el padding de las cards */
+  }
+
+  h1, h2, h3 {
+    font-size: 1.5rem; /* Ajustar tamaños de fuente */
+  }
+
+  button, .btn {
+    padding: 10px 20px; /* Reducir el tamaño de los botones */
+    font-size: 0.9rem; /* Ajustar el tamaño de fuente de los botones */
+  }
+}
+
+/* Para pantallas pequeñas, como teléfonos móviles */
+@media (max-width: 480px) {
+  /* Navbar y footer */
+  app-navbar, app-footer {
+    padding: 8px; /* Reducir el padding en dispositivos móviles */
+  }
+
+  /* Contenedor */
+  .container {
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  /* Cards */
+  .card {
+    padding: 12px;
+  }
+
+  /* Títulos */
+  h1, h2, h3 {
+    font-size: 1.2rem; /* Reducir el tamaño de los títulos */
+  }
+
+  /* Botones */
+  button, .btn {
+    padding: 8px 15px; /* Reducir padding en botones */
+    font-size: 0.85rem; /* Ajustar tamaño de los botones */
   }
 }

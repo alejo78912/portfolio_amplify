@@ -62,7 +62,66 @@ h2 {
 }
 
 @media (max-width: 768px) {
+  /* Ajustes para dispositivos con pantallas pequeñas */
+  .container.job {
+    padding: 40px 15px; /* Reducir el padding */
+  }
+
+  h2 {
+    font-size: 2rem; /* Reducir el tamaño del título */
+    margin-bottom: 20px; /* Ajustar el margen inferior */
+  }
+
   .job-card {
-    padding: 15px;
+    padding: 15px; /* Reducir el padding de las tarjetas */
+  }
+
+  .job-card h5 {
+    font-size: 1.3rem; /* Reducir el tamaño de los títulos en las tarjetas */
+  }
+
+  .job-card p {
+    font-size: 1rem; /* Reducir el tamaño del texto dentro de las tarjetas */
+  }
+
+  .job-card small {
+    font-size: 0.8rem; /* Reducir el tamaño del texto pequeño */
+  }
+
+  .row {
+    margin-top: 30px; /* Ajustar el margen entre las tarjetas */
+  }
+}
+
+/* Media Queries para pantallas muy pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+  /* Ajustes para dispositivos con pantallas muy pequeñas */
+  .container.job {
+    padding: 30px 10px; /* Reducir aún más el padding */
+  }
+
+  h2 {
+    font-size: 1.6rem; /* Reducir más el tamaño del título */
+    margin-bottom: 15px; /* Reducir el margen inferior */
+  }
+
+  .job-card {
+    padding: 10px; /* Reducir el padding de las tarjetas */
+  }
+
+  .job-card h5 {
+    font-size: 1.2rem; /* Reducir el tamaño de los títulos */
+  }
+
+  .job-card p {
+    font-size: 0.95rem; /* Reducir el tamaño del texto */
+  }
+
+  .job-card small {
+    font-size: 0.75rem; /* Reducir el tamaño del texto pequeño */
+  }
+
+  .row {
+    margin-top: 20px; /* Reducir el espacio entre las tarjetas */
   }
 }

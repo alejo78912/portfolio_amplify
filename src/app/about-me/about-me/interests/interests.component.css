@@ -23,6 +23,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: fadeInUp 1s ease-in-out;
+  margin-bottom: 20px; /* Espaciado entre tarjetas */
 }
 
 .interest-card i {
@@ -73,5 +74,51 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Media Queries para pantallas pequeñas (dispositivos móviles) */
+@media (max-width: 767px) {
+  .interests {
+    padding: 30px 15px; /* Reducir el padding para pantallas pequeñas */
+  }
+
+  .interests h2 {
+    font-size: 2rem; /* Reducir el tamaño del título */
+  }
+
+  .interest-card {
+    padding: 20px; /* Reducir el padding de las tarjetas */
+  }
+
+  .interest-card h5 {
+    font-size: 1.2rem; /* Reducir el tamaño del título en las tarjetas */
+  }
+
+  .interest-card p {
+    font-size: 0.95rem; /* Reducir el tamaño del texto en las tarjetas */
+  }
+}
+
+/* Media Queries para pantallas muy pequeñas (dispositivos con pantallas pequeñas, como smartphones en orientación vertical) */
+@media (max-width: 480px) {
+  .interests {
+    padding: 20px 10px; /* Aumentar un poco más el espacio en los laterales */
+  }
+
+  .interests h2 {
+    font-size: 1.8rem; /* Reducir aún más el tamaño del título */
+  }
+
+  .interest-card {
+    padding: 15px; /* Reducir aún más el padding de las tarjetas */
+  }
+
+  .interest-card h5 {
+    font-size: 1.1rem; /* Reducir aún más el tamaño del título en las tarjetas */
+  }
+
+  .interest-card p {
+    font-size: 0.9rem; /* Reducir aún más el tamaño del texto en las tarjetas */
   }
 }

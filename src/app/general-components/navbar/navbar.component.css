@@ -3,6 +3,9 @@
   background-color: #343a40; /* Fondo oscuro */
   padding: 0.8rem 1.5rem;
   animation: fadeInDown 1s ease-out;
+  display: flex;
+  justify-content: space-between; /* Asegura que el logo y los enlaces se distribuyan correctamente */
+  align-items: center; /* Alineación vertical de los elementos */
 }
 
 /* Estilo para los enlaces de navegación */
@@ -61,4 +64,50 @@
 /* Estilo para la barra de navegación en dispositivos móviles */
 .navbar-toggler-icon {
   background-color: #5499c7; /* Icono del toggler con el color principal */
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  /* Ajustes en la barra de navegación */
+  .navbar {
+    flex-direction: column; /* Los elementos se apilan en lugar de estar en fila */
+    padding: 1rem; /* Más espacio en pantallas pequeñas */
+  }
+
+  .navbar-nav {
+    display: none; /* Ocultar los enlaces por defecto */
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar-nav.active {
+    display: flex; /* Mostrar los enlaces cuando el navbar-toggler esté activado */
+  }
+
+  .navbar-nav .nav-link {
+    margin-left: 0; /* Eliminar el margen de la izquierda */
+    text-align: center; /* Centrar los enlaces */
+    padding: 10px 0;
+  }
+
+  .navbar-nav .nav-link:hover {
+    transform: translateY(0); /* Eliminar la elevación en pantallas pequeñas para evitar que se vea extraño */
+  }
+
+  .navbar-toggler {
+    border: none; /* Eliminar el borde del botón */
+    background: none; /* Sin fondo en el botón */
+  }
+}
+
+/* Media Queries para pantallas muy pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 1.5rem; /* Reducir el tamaño de la marca para pantallas muy pequeñas */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1rem; /* Reducir el tamaño de la fuente en pantallas muy pequeñas */
+  }
 }

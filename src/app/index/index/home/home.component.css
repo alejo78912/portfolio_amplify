@@ -44,3 +44,35 @@
       transform: translateY(0);
   }
 }
+
+/* Mejoras para pantallas pequeñas */
+@media (max-width: 768px) {
+  .intro {
+    padding: 30px 15px; /* Reducir el padding en pantallas pequeñas */
+  }
+
+  .intro p {
+    font-size: 1rem; /* Reducir tamaño del texto */
+  }
+
+  .intro .btn-primary {
+    font-size: 1.1rem; /* Reducir el tamaño del botón */
+    padding: 12px 25px; /* Reducir el padding del botón */
+  }
+}
+
+/* Mejoras para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .intro {
+    padding: 25px 10px; /* Ajuste de padding aún más en pantallas muy pequeñas */
+  }
+
+  .intro p {
+    font-size: 0.95rem; /* Reducir aún más el tamaño del texto */
+  }
+
+  .intro .btn-primary {
+    font-size: 1rem; /* Reducir el tamaño del botón aún más */
+    padding: 10px 20px; /* Reducir padding del botón */
+  }
+}

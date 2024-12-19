@@ -21,7 +21,7 @@ export class TechComponent implements OnInit {
     // Datos de prueba hasta que el servicio esté listo
     this.technologies = [
       { name: 'Angular', description: 'A powerful JavaScript framework.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png' },
-      { name: 'Java', description: 'A robust and popular programming language.', image: 'https://brandslogos.com/wp-content/uploads/thumbs/java-logo-vector-1.svg' },
+      { name: 'Java', description: 'A robust and popular programming language.', image: 'https://cdn.freebiesupply.com/logos/large/2x/java-4-logo-png-transparent.png' },
       { name: 'Python', description: 'A versatile programming language.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png' },
       { name: 'Docker', description: 'Containerization platform.', image: 'https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png' },
       { name: 'Spring Boot', description: 'Java-based backend framework.', image: 'https://dominickm.com/wp-content/uploads/2016/06/spring-boot-logo_full.png' },
@@ -32,7 +32,7 @@ export class TechComponent implements OnInit {
       { name: 'TypeScript', description: 'Typed superset of JavaScript.', image: 'https://img.icons8.com/ios7/600/typescript.png' },
       { name: 'Git', description: 'Version control system.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2048px-Git_icon.svg.png' },
       { name: 'HTML', description: 'Markup language for the web.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png' },
-      { name: 'CSS', description: 'Stylesheet language for web design.', image: 'https://brandslogos.com/wp-content/uploads/images/large/css-logo.png' },
+      { name: 'CSS', description: 'Stylesheet language for web design.', image: 'https://cdn1.iconfinder.com/data/icons/social-media-logos-7/64/css-3-512.png' },
       { name: 'Bootstrap', description: 'CSS framework for responsive design.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png' },
       { name: 'JavaScript', description: 'Programming language for the web.', image: 'https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png' },
       { name: 'PostgreSQL', description: 'Relational database system.', image: 'https://download.logo.wine/logo/PostgreSQL/PostgreSQL-Logo.wine.png' },

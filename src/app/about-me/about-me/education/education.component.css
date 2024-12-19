@@ -70,3 +70,60 @@
     transform: translateY(0);
   }
 }
+
+/* Media Queries para pantallas pequeñas (dispositivos móviles) */
+@media (max-width: 767px) {
+  .education {
+    padding: 30px 15px; /* Menos espacio en los laterales */
+  }
+
+  .education h2 {
+    font-size: 2rem; /* Reducir el tamaño del título */
+    margin-bottom: 30px; /* Reducir margen inferior */
+  }
+
+  /* Tarjetas de educación en una sola columna */
+  .education-card {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .education-card h5 {
+    font-size: 1.2rem; /* Reducir tamaño del título */
+  }
+
+  .education-card p {
+    font-size: 0.95rem; /* Reducir tamaño del texto */
+  }
+
+  .education-card small {
+    font-size: 0.85rem; /* Reducir tamaño de la fecha */
+  }
+}
+
+/* Media Queries para pantallas muy pequeñas (dispositivos con pantallas pequeñas, como smartphones en orientación vertical) */
+@media (max-width: 480px) {
+  .education {
+    padding: 20px 10px; /* Aumentar la reducción del padding en pantallas muy pequeñas */
+  }
+
+  .education h2 {
+    font-size: 1.8rem; /* Reducir aún más el tamaño del título */
+  }
+
+  .education-card {
+    padding: 15px; /* Reducir el padding en las tarjetas */
+  }
+
+  .education-card h5 {
+    font-size: 1.1rem; /* Reducir más el tamaño del título */
+  }
+
+  .education-card p {
+    font-size: 0.9rem; /* Reducir más el tamaño del texto */
+  }
+
+  .education-card small {
+    font-size: 0.8rem; /* Reducir aún más el tamaño de la fecha */
+  }
+}

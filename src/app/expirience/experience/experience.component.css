@@ -46,11 +46,48 @@ h2 {
 
 /* Ajustes en pantallas más pequeñas */
 @media (max-width: 768px) {
+  /* Ajustar padding en pantallas pequeñas */
+  .container {
+    padding: 40px 15px;
+  }
+
+  /* Ajustar tamaño de fuente para el título */
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  /* Ajustar el padding de las secciones */
+  .app-job, .app-projects, .app-timeline {
+    padding: 20px; /* Reducir padding para no sobrecargar los dispositivos pequeños */
+  }
+
+  /* Reducir márgenes para optimizar espacio */
+  .app-section {
+    margin-bottom: 30px;
+  }
+}
+
+/* Media Queries para pantallas muy pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+  /* Ajustar padding en pantallas muy pequeñas */
   .container {
     padding: 30px 10px;
   }
 
+  /* Reducir aún más el tamaño del título */
   h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+
+  /* Ajustar padding de las secciones */
+  .app-job, .app-projects, .app-timeline {
+    padding: 15px; /* Menos padding en dispositivos móviles muy pequeños */
+  }
+
+  /* Reducir márgenes entre las secciones */
+  .app-section {
+    margin-bottom: 20px;
   }
 }

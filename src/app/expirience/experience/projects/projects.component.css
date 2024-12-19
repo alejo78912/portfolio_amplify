@@ -44,8 +44,59 @@ h2 {
 }
 
 @media (max-width: 768px) {
+  /* Ajustes para pantallas más pequeñas (tabletas y móviles grandes) */
+  .container.projects {
+    padding: 40px 15px; /* Reducir el padding */
+  }
+
+  h2 {
+    font-size: 2rem; /* Reducir el tamaño del título */
+    margin-bottom: 20px; /* Ajustar el margen inferior */
+  }
+
   .project-card {
-    padding: 15px;
+    padding: 15px; /* Reducir el padding de las tarjetas */
+  }
+
+  .project-card h5 {
+    font-size: 1.3rem; /* Reducir el tamaño del título de las tarjetas */
+  }
+
+  .project-card p {
+    font-size: 1rem; /* Reducir el tamaño del texto dentro de las tarjetas */
+  }
+
+  .row {
+    margin-top: 30px; /* Reducir el margen entre las tarjetas */
+  }
+}
+
+/* Media Queries para pantallas muy pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+  /* Ajustes para pantallas muy pequeñas (móviles) */
+  .container.projects {
+    padding: 30px 10px; /* Reducir aún más el padding */
+  }
+
+  h2 {
+    font-size: 1.6rem; /* Reducir el tamaño del título */
+    margin-bottom: 15px; /* Ajustar el margen inferior */
+  }
+
+  .project-card {
+    padding: 10px; /* Reducir el padding de las tarjetas */
+  }
+
+  .project-card h5 {
+    font-size: 1.2rem; /* Reducir el tamaño del título de las tarjetas */
+  }
+
+  .project-card p {
+    font-size: 0.95rem; /* Reducir el tamaño del texto */
+  }
+
+  .row {
+    margin-top: 20px; /* Reducir el espacio entre las tarjetas */
   }
 }
 
