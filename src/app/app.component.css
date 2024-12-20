@@ -49,6 +49,96 @@ app-navbar {
   margin: 0; /* Elimina márgenes adicionales */
 }
 
+/* Navbar en dispositivos móviles */
+.navbar {
+  background-color: #343a40;
+  padding: 0.8rem 1.5rem;
+  animation: fadeInDown 1s ease-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+}
+
+.navbar-nav .nav-link {
+  color: #f8f9fa;
+  font-size: 1.1rem;
+  margin-left: 20px;
+  text-transform: uppercase;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #5499c7;
+  transform: translateY(-3px);
+}
+
+.navbar-nav .nav-link.active-link {
+  color: #5499c7;
+  font-weight: bold;
+}
+
+.navbar-toggler-icon {
+  background-color: #5499c7;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .navbar-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar-nav.active {
+    display: flex; /* Muestra los enlaces cuando el navbar-toggler está activado */
+  }
+
+  .navbar-nav .nav-link {
+    margin-left: 0;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .navbar-nav .nav-link:hover {
+    transform: translateY(0);
+  }
+
+  .navbar-toggler {
+    border: none;
+    background: none;
+  }
+}
+
+/* Media Queries para pantallas más pequeñas (hasta 480px) */
+@media (min-width:1024px) {
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+ .navbar{ 
+  position: static;
+  width: auto;
+  height: auto;
+  transform: translateX(0%);
+  float: right;
+  display: flex;}
+
+  .navbar-nav .nav-link {
+    font-size: 1rem;
+  }
+}
+
 /* Espaciado debajo del navbar para que no se superponga con el contenido */
 .container {
   background-color: #1e1e1e; /* Fondo oscuro para el contenedor */

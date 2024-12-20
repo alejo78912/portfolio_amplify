@@ -4,25 +4,29 @@
       <i class="fas fa-laptop-code me-2"></i>
       Alejandro Valencia
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+    <!-- Botón para mostrar u ocultar el menú en dispositivos móviles -->
+    <button class="navbar-toggler" type="button" (click)="toggleMenu()" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+
+    <!-- Contenedor de los enlaces de navegación -->
+    <div class="navbar-nav" [ngClass]="{'active': menuOpen}">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" [routerLink]="['/']" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Home</a>
+          <a class="nav-link" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/about']" routerLinkActive="active-link">About Me</a>
+          <a class="nav-link" href="/about">About Me</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/experience']" routerLinkActive="active-link">Experience</a>
+          <a class="nav-link" href="/experience">Experience</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/knowledges']" routerLinkActive="active-link">Knowledges</a>
+          <a class="nav-link" href="/knowledges">Knowledges</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/contact']" routerLinkActive="active-link">Contact</a>
+          <a class="nav-link" href="/contact">Contact</a>
         </li>
       </ul>
     </div>
