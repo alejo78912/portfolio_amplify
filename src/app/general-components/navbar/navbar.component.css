@@ -1,16 +1,16 @@
 /* Estilos para la barra de navegación */
 .navbar {
   background-color: #343a40;
-  padding: 0.8rem 1.5rem;
+  padding: 0.8rem 1rem;
   animation: fadeInDown 1s ease-out;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative; /* Asegura que el navbar se posicione correctamente */
+  position: relative;
   z-index: 10;
 }
 
-/* Contenedor para el menú deslizante */
+/* Contenedor del menú deslizante */
 .navbar-menu {
   display: flex;
   justify-content: space-between;
@@ -21,8 +21,8 @@
 /* Estilo para los enlaces de navegación */
 .navbar-nav .nav-link {
   color: #f8f9fa;
-  font-size: 1.1rem;
-  margin-left: 20px;
+  font-size: 1rem;
+  margin: 0.5rem 0;
   text-transform: uppercase;
   transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -39,154 +39,138 @@
 
 .navbar-brand {
   color: #5499c7;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
-  animation: slideDown 0.8s ease-out;
 }
 
 /* Animaciones */
 @keyframes fadeInDown {
   from {
-      opacity: 0;
-      transform: translateY(-20px);
+    opacity: 0;
+    transform: translateY(-20px);
   }
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@keyframes slideDown {
-  from {
-      opacity: 0;
-      transform: translateY(-20px);
-  }
-  to {
-      opacity: 1;
-      transform: translateY(0);
-  }
+/* Estilo del botón toggler (icono en móviles) */
+.navbar-toggler {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
-/* Estilo para el icono del toggler en dispositivos móviles */
 .navbar-toggler-icon {
   background-color: #5499c7;
+  width: 25px;
+  height: 3px;
+  position: relative;
+  display: block;
 }
 
-/* Media Queries para pantallas más pequeñas */
-@media (max-width: 768px) {
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: '';
+  background-color: #5499c7;
+  height: 3px;
+  width: 25px;
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+  top: -7px;
+}
+
+.navbar-toggler-icon::after {
+  top: 7px;
+}
+
+.navbar-toggler.open .navbar-toggler-icon::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.navbar-toggler.open .navbar-toggler-icon::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+/* Media Queries para pantallas pequeñas (menos de 576px) */
+@media (max-width: 576px) {
   .navbar {
     flex-direction: column;
+    align-items: flex-start;
     padding: 1rem;
-    position: relative;
-    z-index: 100;
+  }
+
+  .navbar-toggler {
+    display: block;
   }
 
   .navbar-nav {
     flex-direction: column;
     width: 100%;
     padding: 0;
-    align-items: center;
+    align-items: flex-start;
     position: absolute;
-    top: -5px;
+    top: 100%;
     left: 0;
-    right: 500px;
-    background-color: #444; /* Fondo oscuro y más opaco */
+    background-color: #444;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    transform: translateX(100%); /* El menú comienza fuera de la pantalla */
+    transform: translateX(-100%); /* Oculta el menú fuera de la pantalla */
     transition: transform 0.3s ease;
     z-index: 100;
   }
 
   .navbar-nav.active {
-    transform: translateX(0); /* El menú se desliza hacia adentro */
+    transform: translateX(0); /* Muestra el menú al deslizar */
   }
 
   .navbar-nav .nav-link {
-    margin-left: 0;
-    text-align: center;
-    padding: 10px 0;
     width: 100%;
-    border-bottom: 1px solid #444;
-    color: #f8f9fa;
-    font-size: 1.2rem;
+    padding: 0.8rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #555;
   }
 
-  .navbar-nav .nav-link:hover {
-    background-color: #444;
-    transform: translateY(0);
-  }
-
-  .navbar-toggler {
-    display: block;
-    background-color: transparent;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 4px;
-  }
-
-  .navbar-toggler-icon {
-    background-color: #5499c7;
-    width: 30px;
-    height: 3px;
-    position: relative;
-  }
-
-  .navbar-toggler-icon::before,
-  .navbar-toggler-icon::after {
-    content: '';
-    background-color: #5499c7;
-    height: 3px;
-    width: 30px;
-    position: absolute;
-    transition: transform 0.3s ease;
-  }
-
-  .navbar-toggler-icon::before {
-    top: -10px;
-  }
-
-  .navbar-toggler-icon::after {
-    top: 10px;
-  }
-
-  .navbar-toggler.open .navbar-toggler-icon::before {
-    transform: rotate(45deg);
-    top: 0;
-  }
-
-  .navbar-toggler.open .navbar-toggler-icon::after {
-    transform: rotate(-45deg);
-    top: 0;
+  .navbar-nav .nav-link:last-child {
+    border-bottom: none;
   }
 }
 
-/* Media Queries para pantallas más grandes (desde 1024px en adelante) */
-@media (min-width: 1024px) {
-  .navbar-brand {
-    font-size: 1.5rem;
+/* Media Queries para pantallas medianas y más grandes (576px en adelante) */
+@media (min-width: 576px) {
+  .navbar-nav {
+    flex-direction: row;
+    position: static;
+    transform: translateX(0);
+    background-color: transparent;
+    box-shadow: none;
   }
 
+  .navbar-toggler {
+    display: none;
+  }
+}
+
+/* Media Queries para pantallas grandes (1024px en adelante) */
+@media (min-width: 1024px) {
   .navbar {
     padding: 0.8rem 1.5rem;
   }
 
-  .navbar-nav {
-    position: static;
-    transform: translateX(0);
-    flex-direction: row;
-    background-color: transparent;
-    box-shadow: none;
-    margin-left: 20px;
+  .navbar-brand {
+    font-size: 1.8rem;
   }
 
   .navbar-nav .nav-link {
-    color: #f8f9fa;
-    margin-left: 20px;
-  }
-
-  .navbar-nav .nav-link:hover {
-    color: #5499c7;
+    margin: 0 1rem;
+    font-size: 1.1rem;
   }
 }
